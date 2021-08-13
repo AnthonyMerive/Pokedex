@@ -1,10 +1,15 @@
 let nombre = prompt('introduzca su nombre');
 
 const promesa = new Promise((resolve, reject) => {
+    if (nombre == '') {
 
-    resolve(`su nombre es ${nombre}`);
+        reject('error');
 
-    reject('error');
+    } else {
+
+        resolve(`su nombre es ${nombre}`);
+
+    }
 });
 
 promesa.then(res => {
